@@ -14,8 +14,16 @@
     --font-inter: "Inter", sans-serif; 
     --breakpoint-xl: 75.5rem; /* 1208px */
     --container-*: initial;
-    --color-bg-contrast: #243c5a;
+    --color-bg-contrast: #263240;
+    --color-text-main: #000000;
     --color-text-main-contrast: #FFFFFF;
+    --color-text-caption: #1C1C1C66;
+    --color-brand-1: #FF3B3A;
+    --color-bg-main: #FFFFFF;
+    --color-bg-button-light: #F3F3F3;
+
+    --shadow-header: 0px 4px 8px 0px #0000000A;
+    --border-radius-controls: 0.75rem;
 }
 
 @utility container {
@@ -27,5 +35,8 @@
 @layer base {
     html {
         font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.375rem;
     }
 }
