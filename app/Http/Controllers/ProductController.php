@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -12,7 +13,13 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+
+        $perPage = Setting::get('per_page', 8);
+
+        $jobs = Product::orderBy('created_at', 'desc')->simplePaginate($perPage);
+        return view('jobs.index', [
+            'jobs' => $jobs
+        ]);
     }
 
     /**
